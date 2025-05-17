@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "daisyui/theme" {
+  name: "mytheme";
+  default: true; 
+  prefersdark: false; 
+  color-scheme: light; /* color of browser-provided UI */
+
+  --color-primary: #ff6100;
+}
