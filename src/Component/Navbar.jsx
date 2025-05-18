@@ -1,25 +1,25 @@
 import { Link, NavLink } from "react-router";
 const Navbar = () => {
     const link = <>
-          <li><NavLink className={({ isActive }) =>
+        <li><NavLink className={({ isActive }) =>
             isActive ? "bg-orange-600 text-white ml-3 text-lg font-semibold" : "text-gray-700 text-lg hover:bg-orange-600 hover:text-lg hover:text-white ml-2 font-semibold"
         } to="/">Home</NavLink></li>
-          <li><NavLink className={({ isActive }) =>
+        <li><NavLink className={({ isActive }) =>
             isActive ? "bg-orange-600 text-white ml-3 text-lg font-semibold" : "text-gray-700 text-lg hover:bg-orange-600 hover:text-lg hover:text-white ml-2 font-semibold"
         } to="/service">Service</NavLink></li>
-          <li><NavLink className={({ isActive }) =>
+        <li><NavLink className={({ isActive }) =>
             isActive ? "bg-orange-600 text-white ml-3 text-lg font-semibold" : "text-gray-700 text-lg hover:bg-orange-600 hover:text-lg hover:text-white ml-2 font-semibold"
         } to="/about">About</NavLink></li>
-          <li><NavLink className={({ isActive }) =>
+        <li><NavLink className={({ isActive }) =>
             isActive ? "bg-orange-600 text-white ml-3 text-lg font-semibold" : "text-gray-700 text-lg hover:bg-orange-600 hover:text-lg hover:text-white ml-2 font-semibold"
         } to="/vehicles">Vehicles</NavLink></li>
-          <li><NavLink className={({ isActive }) =>
+        <li><NavLink className={({ isActive }) =>
             isActive ? "bg-orange-600 text-white ml-3 text-lg font-semibold" : "text-gray-700 text-lg hover:bg-orange-600 hover:text-lg hover:text-white ml-2 font-semibold"
         } to="/contact">Contact</NavLink></li>
-        
+
     </>
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 shadow-sm px-5 md:px-[100px] lg:px-[100px]">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,8 +31,13 @@ const Navbar = () => {
                         {link}
                     </ul>
                 </div>
-                <a className="btn btn-ghost font-bold text-2xl md:text-5xl lg:text-5xl"><span className="text-orange-600">F</span>ast  <span className="text-orange-600 ml-2">চ</span>লা <span className="text-orange-600">চ</span>
-                ল  </a>
+               <div className="flex-row md:flex lg:flex gap-3 text-3xl md:text-3xl lg:text-4xl font-bold ">
+                <p><span className="text-orange-600">F</span>ast</p> 
+                <p><span className="text-orange-600">চ</span>লা<span className="text-orange-600">চ</span>
+                ল</p>
+               </div>
+
+
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -40,9 +45,10 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-               <button className="btn border-2 text-base md:text-lg lg:text-lg font-semibold border-orange-600 hover:bg-orange-600 hover:text-white p-3 mr-3"><Link >Sign In</Link></button>
-               <button className="btn border-2 text-base md:text-lg lg:text-lg border-orange-600 hover:bg-orange-600 hover:text-white p-3"><Link >Sign Out</Link></button>
-              
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
+                    <button className="btn-xs rounded-xl border-2 border-orange-600   font-semibold  hover:bg-orange-600 hover:text-white p-2 mr-3"><Link >Sign In</Link></button>
+                    <button className="btn-xs rounded-xl border-2 border-orange-600  font-semibold  hover:bg-orange-600 hover:text-white p-2 mr-3"><Link >Sign Out</Link></button>
+                </div>
             </div>
         </div>
     );
